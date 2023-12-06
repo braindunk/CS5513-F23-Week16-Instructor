@@ -4,7 +4,9 @@ import './Tab1.css';
 
 const Tab1: React.FC = () => {
   // dataset state variable to hold JSON data from WP
-  const [dataset, setDataset] = useState([]);
+  // to meet Ionic's requirement for typescript data types
+  // set type to <any[]> on next line
+  const [dataset, setDataset] = useState<any[]>([]);
   // URL for WP JSON REST endpoint
   const dataURL = "https://dev-srjc-fall-2022-cs55-13.pantheonsite.io/wp-json/twentytwentyone-child/v1/things";
   // useEffect() to get JSON data and populate dataset state variable
